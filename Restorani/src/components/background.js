@@ -1,4 +1,5 @@
 //definirana stilizirana pozadinska slika
+
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
@@ -21,7 +22,9 @@ const BackgroundSection = ({ className, children }) => (
       }
     `}
     render={data => {
-      //Definirana pozadinska slika i smjesten sadrzaj iz layouta
+
+      //Definirana pozadinska slika i smjesten sadrzaj iz layouta kao children
+
       const imageData = data.desktop.childImageSharp.fluid
       return (
         <BackgroundImage
@@ -40,14 +43,10 @@ const BackgroundSection = ({ className, children }) => (
 //stvaranje stilizirane pozadinske slike s iducim svojstvima
 
 const StyledBackgroundSection = styled(BackgroundSection)`
-  width: 100%;
-  background-position: bottom center;
-  background-repeat: repeat-y;
-  background-size: cover;
-  padding-top: 70px;
+  min-width: 100%;
+  padding-top: 64px;
   min-height: 100vh;
-  height: auto;
-  position: relative;
+  position: absolute;
 `
 
 export default StyledBackgroundSection

@@ -1,6 +1,10 @@
+//definira navbar
+//iskorišten kod header komponente
+
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import {graphql, useStaticQuery } from "gatsby"
 import styles from '../styles/navigation.module.css'
+import StyledLinkB from './styledLinkB'
 
 const Navigation = ({children}) => {  
   //grapqhl upit dohvaca menuItems iz gatsby-config.js
@@ -17,8 +21,8 @@ const Navigation = ({children}) => {
       }
     }
   `)
-  
-  //text i path se spremaju unutar menuItems
+
+  //text i path od menuitemsa iz graphql upita spremaju se unutar menuItems
   const {menuItems} = data.site.siteMetadata
 
   //Navigation komponenta koja koristi NavLinks komponentu
@@ -27,7 +31,7 @@ const Navigation = ({children}) => {
   //link na naslov u headeru proslijeden kao children u Navigation komponenti i stavljen kao naslov navbara
 
   return (
-    <nav className = "navbar navbar-expand-lg navbar-light bg-light fixed-top py-0 px-0">
+    <nav className = "navbar navbar-expand-lg navbar-light bg-light fixed-top py-0 pl-2 border-bottom border-dark">
       {children}
       <button className = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarNavAltMarkup" aria-controls = "navbarNavAltMarkup" aria-expanded = "false" aria-label = "Toggle navigation">
         <span className = "navbar-toggler-icon"></span>
@@ -68,8 +72,8 @@ const activeStyle = {
 
 const NavLink = ({ children, ...rest }) => {
   return (
-    <div>
-      <Link activeStyle={activeStyle} className = "nav-item nav-link" className = {styles.Link} {...rest}>{children}</Link>
+    <div className = {styles.linkContainer}>
+      <StyledLinkB className = {styles.Link} activeStyle={activeStyle} {...rest}>{children}</StyledLinkB>
     </div>
   )
 }

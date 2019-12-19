@@ -1,0 +1,6 @@
+.leaflet-container {
+    padding-top: 64px;
+    min-height: calc(100vh - 64px);
+    height: auto;
+    width: 100%;
+  }

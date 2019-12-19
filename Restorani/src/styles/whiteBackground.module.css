@@ -1,0 +1,10 @@
+.white{
+    min-height: calc(100vh - 64px);
+    height: auto;
+    margin: 0 10% auto;
+    background-color: white;
+    border-right: solid;
+    border-left: solid;
+    border-color: black;
+    border-width: thin;
+}

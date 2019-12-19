@@ -1,24 +1,33 @@
+//pocetna stranica, sadrzi dvi kartice za preusmjeravanje na trazilicu ili kartu
+
 import React from "react"
 import Layout from "../components/layout"
+import Card from "../components/card"
 import styles from "../styles/index.module.css"
-import StyledLinkW from '../components/styledLinkW'
 
-// sadrzi dvije kartice s linkovima prema restaurant i map
+//props1 i props2 podaci za kartice koji se iskoristavaju unutar card komponente
+//koristi se spread operator ...props kako bi se omogucilo koristenje text, button i path unutar card komponente
+
+let props1 = {
+  text: 'Za pretraživanje restorana po nazivu ili jelima koja poslužuju',
+  button: `Klikni ovdje`,
+  path: '/search'
+}
+
+let props2 = {
+  text: `Za pregled restorana u blizini preko karte`,
+  button: `Klikni ovdje`,
+  path: '/map'
+}
 
 const IndexPage= () => (
     <Layout>
-      <div className={styles.container}>     
-        <div class="card-body" className={styles.card}>
-          <h5 class="card-title" className={styles.text}>Za pretraživanje restorana po nazivu ili jelima koja poslužuju</h5>
-          <button class="btn bbtn btn-danger btn-lg"><StyledLinkW to = '/restaurant'>Klikni ovdje</StyledLinkW></button>
+      <div className={styles.container}>
+        <div className={`row ${styles.row}`}>
+          <Card {...props1}></Card>
+          <Card {...props2}></Card>
         </div>
-        <div class="card-body" className={styles.card}>
-          <h5 class="card-title" className={styles.text}>Za pregled restorana u blizini preko karte</h5>
-          <button class="btn btn btn-danger btn-lg"><StyledLinkW to = '/map'>Klikni ovdje</StyledLinkW></button>
-        </div>
-      </div> 
-    
-
+      </div>
     </Layout>
 )
 

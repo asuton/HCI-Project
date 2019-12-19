@@ -1,11 +1,14 @@
+//header komponenta koristena u layout komponenti
+
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import {graphql, useStaticQuery } from "gatsby"
 import styles from '../styles/header.module.css'
+import StyledLinkB from './styledLinkB'
 
 import Navigation from "./navigation"
 
 //header komponenta sadrzi naslov stranice koji je ujedno link za pocetnu stranicu
-//sadrzi Navigation komponentu
+//implementira navigacijsku komponentu s linkovima
 
 const Header = () => {
   //graphql upit dohvaca naslov
@@ -21,7 +24,7 @@ const Header = () => {
   return (
     <header>
       <div>
-        <Navigation><Link to = "/" className = {styles.Title}>{data.site.siteMetadata.title}</Link></Navigation>
+        <Navigation><StyledLinkB to = "/" className = {styles.Title}>{data.site.siteMetadata.title}</StyledLinkB></Navigation>
       </div>
     </header>
   )

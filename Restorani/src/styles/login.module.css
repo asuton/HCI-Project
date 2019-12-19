@@ -1,0 +1,25 @@
+.display{
+    min-height: calc(100vh - 64px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    opacity: 0.95;
+    border: solid;
+    border-color: black;
+    border-width: thin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+
