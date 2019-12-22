@@ -1,0 +1,16 @@
+
+.images{
+     
+    height: 50px;
+    width: 50px;
+    
+ 
+}
+.image{
+    padding-top: 10px;  
+
+}
+.container
+{
+    display: grid;
+}

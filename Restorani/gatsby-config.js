@@ -24,22 +24,22 @@ module.exports = {
     background: `../images/food.png`,
     information: [
       {
-        name: "bokamora",
+        name: "Bokamora",
         stars: 3,
-        address: "adresabokamora",
-        path: "../images/food.png",
+        address:"Trumbićeva obala 16, 21000, Split",
+        path: "bokamorra.jpg",
       },
       {
-        name: "plan b",
+        name: "Plan b",
         stars: 4,
-        address: "adresaplanb",
-        path: "../images/gatsby-astronaut.png",
+        address: "Slobode ul. 16A, 21000, Split",
+        path: "plan-b.png",
       },
       {
-        name: "basta",
+        name: "Basta",
         stars: 2,
-        address: "adresabasta",
-        path: "../images/gatsby-icon.png",
+        address: "Obala kneza Branimira BB, 21000, Split",
+        path: "basta.jpg",
       },
     ],
     location: [
@@ -76,8 +76,10 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+       
       },
     },
+    
     {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {

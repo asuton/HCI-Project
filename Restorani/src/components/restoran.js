@@ -2,6 +2,8 @@
 
 import React from "react"
 import {graphql, useStaticQuery } from "gatsby"
+import RestaurantCard from "../components/restaurantcard"
+import styles from "../styles/restaurant.module.css"
 
 
 const Restaurants = () => {  
@@ -27,7 +29,9 @@ const Restaurants = () => {
   const {information} = data.site.siteMetadata
 
   return (
+         <div className={styles.name}>
           <Restaurant information = {information} />
+          </div>
   )
 }
 
@@ -39,20 +43,8 @@ const Restaurant = ({ information }) => {
   return(
     <>
     {information.map(restoran => (
-      <div class="card mb-3">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="..." class="card-img" alt="..."></img>
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">{restoran.name}</h5>
-              <p class="card-text">{restoran.path}</p>
-              <p class="card-text"><small class="text-muted">{restoran.address}</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <RestaurantCard {...restoran}></RestaurantCard>
+     
     ))}
     </>
   )
