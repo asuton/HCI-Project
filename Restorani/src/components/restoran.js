@@ -26,25 +26,25 @@ const Restaurants = () => {
   `)
 
   //address, name, stars i path iz graphql upita spremaju se unutar information
+
   const {information} = data.site.siteMetadata
 
   return (
-         <div className={styles.name}>
+        <div className = {styles.name}>
           <Restaurant information = {information} />
-          </div>
+        </div>
   )
 }
 
 //Restaurant komponenta preko Restaurants dobiva information te zatim stvara novi niz
-//niz se sastoji od kartica + informacija o pojedinom restoranu
+//niz se sastoji od RestaurantCard komponenti
 
 const Restaurant = ({ information }) => {
 
   return(
     <>
     {information.map(restoran => (
-      <RestaurantCard {...restoran}></RestaurantCard>
-     
+      <RestaurantCard  key = {restoran.path} {...restoran}></RestaurantCard>    
     ))}
     </>
   )

@@ -2,10 +2,10 @@
 
 import React from "react"
 import {graphql, useStaticQuery } from "gatsby"
-import styles from '../styles/header.module.css'
-import StyledLinkB from './styledLinkB'
+import styles from '../../styles/header.module.css'
+import StyledLinkB from '../links/styledLinkB'
 
-import Navigation from "./navigation"
+import NavigationIndex from "../navigation/navigationIndex"
 
 //header komponenta sadrzi naslov stranice koji je ujedno link za pocetnu stranicu
 //implementira navigacijsku komponentu s linkovima
@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header>
       <div>
-        <Navigation><StyledLinkB to = "/" className = {styles.Title}>{data.site.siteMetadata.title}</StyledLinkB></Navigation>
+        <NavigationIndex><StyledLinkB to = "/" className = {styles.Title}>{data.site.siteMetadata.title}</StyledLinkB></NavigationIndex>
       </div>
     </header>
   )

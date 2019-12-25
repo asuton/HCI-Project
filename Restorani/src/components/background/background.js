@@ -10,28 +10,28 @@ import BackgroundImage from 'gatsby-background-image'
 //preko graphql upita dohvaca fluidnu sliku
 const BackgroundSection = ({ className, children }) => (
   <StaticQuery
-    query={graphql`
+    query = {graphql`
       query {
         desktop: file(relativePath: { eq: "food.png" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
       }
     `}
-    render={data => {
+    render = {data => {
 
       //Definirana pozadinska slika i smjesten sadrzaj iz layouta kao children
 
       const imageData = data.desktop.childImageSharp.fluid
       return (
         <BackgroundImage
-          Tag="section"
-          className={className}
-          fluid={imageData}
-          backgroundColor={`#040e18`}
+          Tag = "section"
+          className = {className}
+          fluid = {imageData}
+          backgroundColor = {`#040e18`}
         >
         {children}
         </BackgroundImage>
@@ -47,6 +47,8 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   padding-top: 64px;
   min-height: 100vh;
   position: absolute;
+  background-size: cover;
+  background-position: 50% 50%;
 `
 
 export default StyledBackgroundSection

@@ -1,4 +1,5 @@
 /* Boja footera i sadrzaja unutra te velicina i raspored*/
+
 .footer{
   background-color: #f8f9fa;
   border-top: solid;
@@ -12,6 +13,7 @@
 }
 
 /*tekst u footeru*/ 
+
 .position{
   padding: 0px;
   margin: 0px;

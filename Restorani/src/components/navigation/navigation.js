@@ -1,10 +1,10 @@
-//definira navbar
+//definira navbar za header kod svih stranica osim index
 //iskorišten kod header komponente
 
 import React from "react"
 import {graphql, useStaticQuery } from "gatsby"
-import styles from '../styles/navigation.module.css'
-import StyledLinkB from './styledLinkB'
+import styles from '../../styles/navigation.module.css'
+import StyledLinkB from '../links/styledLinkB'
 
 const Navigation = ({children}) => {  
   //grapqhl upit dohvaca menuItems iz gatsby-config.js

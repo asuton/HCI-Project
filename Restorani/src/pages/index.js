@@ -1,7 +1,7 @@
 //pocetna stranica, sadrzi dvi kartice za preusmjeravanje na trazilicu ili kartu
 
 import React from "react"
-import Layout from "../components/layout"
+import LayoutIndex from "../components/layout/layoutIndex"
 import Card from "../components/card"
 import styles from "../styles/index.module.css"
 
@@ -20,15 +20,15 @@ let props2 = {
   path: '/map'
 }
 
-const IndexPage= () => (
-    <Layout>
-      <div className={styles.container}>
-        <div className={`row ${styles.row}`}>
+const IndexPage = () => (
+    <LayoutIndex>
+      <div className = {styles.container}>
+        <div className = {`row ${styles.row}`}>
           <Card {...props1}></Card>
           <Card {...props2}></Card>
         </div>
       </div>
-    </Layout>
+    </LayoutIndex>
 )
 
 export default IndexPage

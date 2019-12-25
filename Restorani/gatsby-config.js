@@ -21,39 +21,23 @@ module.exports = {
         path: "/login",
       },
     ],
+    menuItemsIndex: [
+      {
+        text: "O aplikaciji",
+        path: "/about",
+      },
+      {
+        text: "Prijavi se",
+        path: "/login",
+      },
+    ],
     background: `../images/food.png`,
     information: [
       {
-        name: "Bokamora",
+        name: "Bokamorra",
         stars: 3,
         address:"Trumbićeva obala 16, 21000, Split",
         path: "bokamorra.jpg",
-      },
-      {
-        name: "Plan b",
-        stars: 4,
-        address: "Slobode ul. 16A, 21000, Split",
-        path: "plan-b.png",
-      },
-      {
-        name: "Basta",
-        stars: 2,
-        address: "Obala kneza Branimira BB, 21000, Split",
-        path: "basta.jpg",
-      },
-    ],
-    location: [
-      {
-        name: "Basta",
-        address: "Obala kneza Branimira BB, 21000, Split",
-        coordinates: [
-          43.50633405078391,
-          16.43266350030899
-        ]
-      },
-      {
-        name: "Bokamora",
-        address: "Trumbićeva obala 16, 21000, Split",
         coordinates: [
           43.50705579044621,
           16.432593762874603
@@ -61,13 +45,35 @@ module.exports = {
       },
       {
         name: "Plan B",
+        stars: 4,
         address: "Slobode ul. 16A, 21000, Split",
+        path: "plan-b.jpg",
         coordinates: [
           43.5090011373931,
           16.450223922729492
         ]
-      }
-    ]
+      },
+      {
+        name: "Basta",
+        stars: 2,
+        address: "Obala kneza Branimira BB, 21000, Split",
+        path: "basta.jpg",
+        coordinates: [
+          43.50633405078391,
+          16.43266350030899
+        ]
+      },
+      {
+        name: "Bokeria",
+        stars: 5,
+        address: "Domaldova ul. 8, 21000, Split",
+        path: "bokeria.jpg",
+        coordinates: [
+          43.50952247972195,
+          16.438371241092682
+        ]
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -79,7 +85,13 @@ module.exports = {
        
       },
     },
-    
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {

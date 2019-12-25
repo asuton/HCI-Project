@@ -2,10 +2,12 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
+//graphql dohvaca sve slike restorana
+//pri cemu vraca Img fluidnu sliku
 
 const RestaurantImage = props => (
   <StaticQuery
-    query={graphql`
+    query = {graphql`
       query {
         images: allFile {
           edges {
@@ -13,7 +15,7 @@ const RestaurantImage = props => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 600) {
+                fluid(maxWidth: 700 maxHeight: 400) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -22,13 +24,13 @@ const RestaurantImage = props => (
         }
       }
     `}
-    render={data => {
-      const image = data.images.edges.find(n => {
+    render = {data => {
+        const image = data.images.edges.find(n => {
         return n.node.relativePath.includes(props.filename);
       });
-     
-      
-      return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} />;
+
+      return <Img alt = {props.alt} fluid = {image.node.childImageSharp.fluid} style = {{position: "initial"}}/>;
+
     }}
   />
 );

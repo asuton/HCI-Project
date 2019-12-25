@@ -13,10 +13,10 @@ class LeafletMap extends React.Component {
 
   render() {
       return (
-        <Map center={this.props.position} zoom={this.props.zoom}>
+        <Map center = {this.props.position} zoom = {this.props.zoom}>
           <TileLayer
-            url="https://api.mapbox.com/styles/v1/asuton/ck1wbf5ge0gsx1cp7jksevnea/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXN1dG9uIiwiYSI6ImNqdGJidW9sZTBlNm4zeW56djRxODdtMnkifQ.22Y2qFashDLW4lbkedxKeA"
-            attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+            url = "https://api.mapbox.com/styles/v1/asuton/ck1wbf5ge0gsx1cp7jksevnea/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXN1dG9uIiwiYSI6ImNqdGJidW9sZTBlNm4zeW56djRxODdtMnkifQ.22Y2qFashDLW4lbkedxKeA"
+            attribution = "&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           />
           {this.props.markerText !== "" &&
           <Markers></Markers>
@@ -35,7 +35,7 @@ const Markers = () => {
     query {
       site {
         siteMetadata {
-          location {
+          information {
             address
             coordinates
             name
@@ -45,13 +45,16 @@ const Markers = () => {
     }
   `)
 
-  const {location} = data.site.siteMetadata
+  const {information} = data.site.siteMetadata
 
   return(
     <>
-    {location.map(restoran => (
-      <Marker position={restoran.coordinates}>
-        <Popup>{restoran.name}</Popup>
+    {information.map(restoran => (
+      <Marker position = {restoran.coordinates}>
+        <Popup>
+          <div>{restoran.name}</div>
+          <div>{restoran.address}</div>
+        </Popup>
       </Marker>
       ))}
     </>

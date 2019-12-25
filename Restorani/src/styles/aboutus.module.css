@@ -1,16 +1,15 @@
+/*ikone unutar about.js*/
 
 .images{
-     
-    height: 50px;
-    width: 50px;
-    
- 
+    display: flex;
+    justify-content: center;
 }
 .image{
-    padding-top: 10px;  
-
+    height: 50px;
+    width: 50px;
+    transition: transform 1s;
 }
-.container
-{
-    display: grid;
+
+.image:hover {
+    transform: scale(1.2);
 }

@@ -17,8 +17,8 @@ const Footer = () => {
     }
   `)
     return (
-      <footer className="page-footer font-small border-top border-dark" className = {styles.footer}>
-        <div className="footer-copyright text-center">
+      <footer className = "page-footer font-small border-top border-dark" className = {styles.footer}>
+        <div className = "footer-copyright text-center">
           <p className = {styles.position}>{data.site.siteMetadata.author} HCI 2019</p>
         </div>
       </footer>

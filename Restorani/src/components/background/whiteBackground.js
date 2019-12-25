@@ -2,7 +2,7 @@
 //unutar njega se postavlja sadrzaj
 
 import React from 'react'
-import styles from '../styles/whiteBackground.module.css'
+import styles from '../../styles/whiteBackground.module.css'
 
 const WhiteBackground = ({children}) => {
     return(

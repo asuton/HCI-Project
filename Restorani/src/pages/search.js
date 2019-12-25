@@ -1,9 +1,9 @@
 import React from "react"
-import Layout from "../components/layout"
-import WhiteBackground from "../components/whiteBackground"
+import Layout from "../components/layout/layout"
+import WhiteBackground from "../components/background/whiteBackground"
 import Restaurants from "../components/restoran"
 
-const SearchPage= () => {
+const SearchPage = () => {
 
   return(
     <>
