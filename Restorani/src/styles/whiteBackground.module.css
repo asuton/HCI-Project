@@ -14,3 +14,20 @@
     padding-right: 5%;
     padding-bottom: 3%
 }
+
+@media only screen and (max-width: 3000px){
+    .white{
+        padding-left: 5%;
+        padding-right: 5%;
+        margin: 0 10% auto;
+    }
+}
+
+
+@media only screen and (max-width: 400px){
+    .white{
+        padding-left: 3%;
+        padding-right: 3%;
+        margin: 0 5% auto;
+    }
+}

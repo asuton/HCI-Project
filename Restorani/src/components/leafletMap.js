@@ -7,6 +7,7 @@ import React from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 import '../styles/leafletMap.css'
 import {graphql, useStaticQuery } from "gatsby"
+import StyledLinkB from "./links/styledLinkB"
 
 
 class LeafletMap extends React.Component {
@@ -39,6 +40,7 @@ const Markers = () => {
             address
             coordinates
             name
+            path
           }
         }
       }
@@ -50,9 +52,9 @@ const Markers = () => {
   return(
     <>
     {information.map(restoran => (
-      <Marker position = {restoran.coordinates}>
+      <Marker key = {restoran.coordinates} position = {restoran.coordinates}>
         <Popup>
-          <div>{restoran.name}</div>
+          <StyledLinkB to = {restoran.path}><div>{restoran.name}</div></StyledLinkB>
           <div>{restoran.address}</div>
         </Popup>
       </Marker>

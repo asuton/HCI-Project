@@ -2,8 +2,8 @@
 
 import React from "react"
 import {graphql, useStaticQuery } from "gatsby"
-import RestaurantCard from "../components/restaurantcard"
-import styles from "../styles/restaurant.module.css"
+import RestaurantCard from "./restaurantCard"
+import styles from "../styles/restaurantCard.module.css"
 
 
 const Restaurants = () => {  
@@ -19,6 +19,7 @@ const Restaurants = () => {
             name
             stars
             path
+            image
           }
         }
       }

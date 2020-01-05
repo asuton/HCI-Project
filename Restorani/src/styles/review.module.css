@@ -1,0 +1,17 @@
+/* za recenzije */
+
+.stars{
+    color:yellow;
+}
+
+.header{
+    background-color: white !important;
+    border: none !important;
+}
+
+.review{
+    border-radius: 0px !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}

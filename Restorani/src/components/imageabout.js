@@ -31,10 +31,10 @@ const ImageAbout = () => {
 }
 
 //a predstavlja linkove koji se pridruzuju ikonama
-//Social komponenta vraca niz ikona unutar diva pri cemu su pridruzeni odgovarajuci linkovis
+//Social komponenta vraca niz ikona unutar diva pri cemu su pridruzeni odgovarajuci linkovi
 
 const Social = ({data}) => {
-  var a = ["https://hr-hr.facebook.com/fesb.hr", "https://github.com/github", "https://twitter.com/hashtag/fesb?lang=en", "https://www.google.com/intl/hr/gmail/about/#"]
+  var a = ["https://hr-hr.facebook.com/fesb.hr", "https://github.com/github", "https://www.google.com/intl/hr/gmail/about/#", "https://twitter.com/hashtag/fesb?lang=en"]
   var i = 0
   return(
       <div className = {styles.images} >

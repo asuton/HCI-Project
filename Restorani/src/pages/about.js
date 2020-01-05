@@ -4,7 +4,6 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import WhiteBackground from "../components/background/whiteBackground"
 import ImageAbout from "../components/imageabout"
-import styles from "../styles/aboutus.module.css"
 
 let about = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
@@ -44,7 +43,7 @@ const AboutPage = () => (
           <p>{about}</p>
           <h2>O aplikaciji</h2>
           <p>{app}</p>
-          <h2>Kontaktirajte nas:</h2>
+          <h2>Kontaktirajte nas</h2>
           <p>{contact}</p>
           <ImageAbout></ImageAbout>
         </div> 

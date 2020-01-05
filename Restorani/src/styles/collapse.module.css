@@ -1,0 +1,49 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.column{
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.price{
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-link{
+    color: red;
+}
+
+@media only screen and (max-width: 3000px){
+    .content{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .column{
+        width: 175px;
+    }
+    .price{
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .column{
+        width: auto;
+    }
+    .price{
+        width: auto;
+    }
+}

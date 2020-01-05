@@ -3,7 +3,6 @@
 import React from "react"
 import Layout from "../components/layout/layout"
 import styles from "../styles/login.module.css"
-import StyledLinkW from "../components/links/styledLinkW"
 
 const LoginPage = () => (
   <Layout>
@@ -12,15 +11,15 @@ const LoginPage = () => (
         <h3 className = "pb-5">Prijavi se</h3>
         <form className = {styles.content}>
           <div className = " form-group">
-            <label for = "exampleInputEmail1">Unesi e-mail adresu</label>
-            <input type = "email" className = "form-control form-control-lg" id = "exampleInputEmail1" aria-describedby = "emailHelp" placeholder = "E-mail"></input>
+            <label for = "validationDefault01">Unesi e-mail adresu</label>
+            <input type = "email" className = "form-control form-control-lg" id = "validationDefault01" aria-describedby = "emailHelp" placeholder = "E-mail" required></input>
           </div>
           <div className = "form-group">
-            <label for = "exampleInputPassword1">Unesi lozinku</label>
-            <input type = "password" className = "form-control form-control-lg" id = "exampleInputPassword1" placeholder = "Lozinka"></input>
+            <label for = "validationDefault02">Unesi lozinku</label>
+            <input type = "password" className = "form-control form-control-lg" id = "validationDefault02" placeholder = "Lozinka" required></input>
           </div>
           <br></br>
-          <StyledLinkW to = '/'><button type = "submit" className = {`btn btn-lg btn-danger ${styles.button}`}>Prijavi se</button></StyledLinkW>
+          <button type = "submit" className = {`btn btn-lg btn-danger ${styles.button}`}>Prijavi se</button>
         </form>
       </div>
     </div>
