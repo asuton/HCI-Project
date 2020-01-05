@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout/layout"
 import WhiteBackground from "../components/background/whiteBackground"
-import Restaurants from "../components/restaurants"
+import Restorani from "../components/restaurants"
 
 const SearchPage = () => {
 
@@ -9,7 +9,7 @@ const SearchPage = () => {
     <>
     <Layout>
       <WhiteBackground>
-        <Restaurants></Restaurants>
+        <Restorani></Restorani>
       </WhiteBackground>
     </Layout>
   </>
