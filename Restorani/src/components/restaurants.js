@@ -34,27 +34,39 @@ class Restaurants extends React.Component {
   constructor(props){
          super(props);
          this.inf=this.props.data;
-         this.handleClick = this.handleClick.bind(this);
+         this.state={
+           search: ''
+         };
   }
-  b(){
+  
+  page(){
+    var filtrirano=this.inf.filter(
+      (restoran)=>{
+      return restoran.name.toLowerCase().indexOf(this.state.search.toLowerCase())!=-1 ||restoran.address.toLowerCase().indexOf(this.state.search.toLowerCase())!=-1 ;
+      }
+        )
         return(
         <>
           <div className = {styles.name}>
-             <Restaurant information = {this.inf} />
+             <Restaurant information = {filtrirano} />
           </div>
         </>)
-       }
+       
+      }
+    
  handleClick=(order)=> {
      if(order==1)
          this.setState({inf:this.inf.sort((a, b) =>  (a.stars > b.stars) ? -1 : 1)}) 
-     else
+     else 
         this.setState({inf:this.inf.sort((a, b) =>  (a.name > b.name) ? 1 : -1) }) 
      
- 
    
   }
  
-  
+ updateSearch=(event)=>{
+    this.setState({search:event.target.value});
+
+}
   render(){
      
 
@@ -62,7 +74,7 @@ class Restaurants extends React.Component {
 
   return (
     <>
-   
+   <div className={styles.FilterandSearch}>
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              Sortiraj
@@ -72,8 +84,10 @@ class Restaurants extends React.Component {
           <button class="dropdown-item" onClick={() => { this.handleClick('2') } } type="button">Sortiraj po abecedi</button>
         </div>
       </div>
- 
-     {this.b()}    
+
+      <input type="text" placeholder="Search" value={this.state.search} onChange={this.updateSearch} />
+      </div>
+     {this.page()}    
         </>
   )
   }
@@ -85,7 +99,7 @@ class Restaurant  extends React.Component{
   
 
   render(){
-    
+  
       return(
           <>
             {this.props.information.map(restoran => (

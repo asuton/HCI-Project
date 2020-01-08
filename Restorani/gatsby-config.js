@@ -21,19 +21,10 @@ module.exports = {
         path: "/login",
       },
     ],
-    menuItemsIndex: [
-      {
-        text: "O aplikaciji",
-        path: "/about",
-      },
-      {
-        text: "Prijavi se",
-        path: "/login",
-      },
-    ],
     background: `../images/food.png`,
     information: [
       {
+    
         name: "Bokamorra",
         stars: 3,
         address: "Trumbićeva obala 16, 21000, Split",
@@ -56,6 +47,7 @@ module.exports = {
         ]
       },
       {
+        
         name: "Basta",
         stars: 2,
         address: "Obala kneza Branimira BB, 21000, Split",
@@ -67,6 +59,7 @@ module.exports = {
         ]
       },
       {
+        
         name: "Bokeria",
         stars: 5,
         address: "Domaldova ul. 8, 21000, Split",
@@ -78,6 +71,7 @@ module.exports = {
         ]
       },
       {
+        
         name: "Apetit",
         stars: 3,
         address: "Ul. Pavla Šubića 5, 21000, Split",
@@ -89,6 +83,7 @@ module.exports = {
         ]
       },
       {
+       
         name: "Kadena",
         stars: 4,
         address: "Ul. Ivana pl. Zajca 4, 21000, Split",
@@ -100,6 +95,7 @@ module.exports = {
         ]
       },
       {
+        
         name: "Lučica",
         stars: 5,
         address: "Lučica 7, 21000, Split",
@@ -111,6 +107,7 @@ module.exports = {
         ]
       },
       {
+        
         name: "Kitchen5",
         stars: 4,
         address: "Ul. Kraj Svete Marije 1, 21000, Split",
@@ -122,6 +119,7 @@ module.exports = {
         ]
       },
       {
+        
         name: "Perivoj",
         stars: 5,
         address: "Slavićeva Ul. 44, 21000, Split",

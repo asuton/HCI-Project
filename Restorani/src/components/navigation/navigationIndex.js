@@ -13,7 +13,7 @@ const Navigation = ({children}) => {
     query {
       site {
         siteMetadata {
-          menuItemsIndex{
+          menuItems{
             text
             path
           }
@@ -23,8 +23,8 @@ const Navigation = ({children}) => {
   `)
 
   //text i path od menuitemsa iz graphql upita spremaju se unutar menuItems
-  const {menuItemsIndex} = data.site.siteMetadata
-
+  const {menuItems} = data.site.siteMetadata
+  
   //Navigation komponenta koja koristi NavLinks komponentu
   //prosljeduje se menuItems
   //bootstrap navbar 
@@ -38,7 +38,7 @@ const Navigation = ({children}) => {
       </button>
       <div className = "collapse navbar-collapse" id = "navbarNavAltMarkup">
         <div className = "navbar-nav ml-auto"> 
-          <NavLinks menuItemsIndex = {menuItemsIndex} />
+          <NavLinks menuItems = {menuItems} />
         </div>
       </div>
     </nav>
@@ -50,10 +50,17 @@ const Navigation = ({children}) => {
 //svaki child mora imati jedinstveni key, a to je path jer je jedinstven 
 //key je u komponenti zbog brzeg ucitavanja
 
-const NavLinks = ({ menuItemsIndex }) => {
+const NavLinks = ({ menuItems }) => {
+  
+ const dat= menuItems.filter(
+    (restoran)=>{
+    return  restoran.text!="Restorani" && restoran.text!="U blizini" ;
+    }
+  
+  )
   return(
     <>
-    {menuItemsIndex.map(menuItem => (
+    {dat.map(menuItem => (
         <NavLink key = {menuItem.path} to = {menuItem.path}>
           {menuItem.text}
         </NavLink>
