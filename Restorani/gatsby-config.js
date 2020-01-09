@@ -13,6 +13,10 @@ module.exports = {
         path: "/map",
       },
       {
+        text: "Blog",
+        path: "/blog",
+      },
+      {
         text: "O aplikaciji",
         path: "/about",
       },
@@ -24,7 +28,6 @@ module.exports = {
     background: `../images/food.png`,
     information: [
       {
-    
         name: "Bokamorra",
         stars: 3,
         address: "Trumbićeva obala 16, 21000, Split",
@@ -47,7 +50,6 @@ module.exports = {
         ]
       },
       {
-        
         name: "Basta",
         stars: 2,
         address: "Obala kneza Branimira BB, 21000, Split",
@@ -59,7 +61,6 @@ module.exports = {
         ]
       },
       {
-        
         name: "Bokeria",
         stars: 5,
         address: "Domaldova ul. 8, 21000, Split",
@@ -71,7 +72,6 @@ module.exports = {
         ]
       },
       {
-        
         name: "Apetit",
         stars: 3,
         address: "Ul. Pavla Šubića 5, 21000, Split",
@@ -83,7 +83,6 @@ module.exports = {
         ]
       },
       {
-       
         name: "Kadena",
         stars: 4,
         address: "Ul. Ivana pl. Zajca 4, 21000, Split",
@@ -95,7 +94,6 @@ module.exports = {
         ]
       },
       {
-        
         name: "Lučica",
         stars: 5,
         address: "Lučica 7, 21000, Split",
@@ -107,7 +105,6 @@ module.exports = {
         ]
       },
       {
-        
         name: "Kitchen5",
         stars: 4,
         address: "Ul. Kraj Svete Marije 1, 21000, Split",
@@ -119,7 +116,6 @@ module.exports = {
         ]
       },
       {
-        
         name: "Perivoj",
         stars: 5,
         address: "Slavićeva Ul. 44, 21000, Split",
@@ -128,6 +124,72 @@ module.exports = {
         coordinates: [
           43.51389535299577,
           16.44090861082077
+        ]
+      },
+      {
+        name: "Movi",
+        stars: 2,
+        address: "Put Firula 47, 21000, Split",
+        image: "movi.jpg",
+        path: "/search/Movi",
+        coordinates: [
+          43.50167463424524,
+          16.456108689308167
+        ]
+      },
+      {
+        name: "Makarun",
+        stars: 3,
+        address: "Marulićeva ul. 3, 21000, Split",
+        image: "makarun.jpg",
+        path: "/search/Makarun",
+        coordinates: [
+          43.50843310256541,
+          16.4389505982399
+        ]
+      },
+      {
+        name: "Chops Grill",
+        stars: 4,
+        address: "Tončićeva ul. 4, 21000, Split",
+        image: "chops.jpg",
+        path: "/search/ChopsGrill",
+        coordinates: [
+          43.510183877688696,
+          16.4372581243515
+        ]
+      },
+      {
+        name: "Galija",
+        stars: 4,
+        address: "Tončićeva ul. 12, 21000, Split",
+        image: "galija.jpg",
+        path: "/search/Galija",
+        coordinates: [
+          43.509987404343526,
+          16.436756551265717
+        ]
+      },
+      {
+        name: "Uje Oil Bar",
+        stars: 4,
+        address: "Dominisova ul. 3, 21000, Split",
+        image: "ujeBar.jpg",
+        path: "/search/UjeOilBar",
+        coordinates: [
+          43.50895834043476,
+          16.439782083034512
+        ]
+      },
+      {
+        name: "Duje",
+        stars: 2,
+        address: "Slobode ul. 16/A, 21000, Split",
+        image: "duje.jpg",
+        path: "/search/Duje",
+        coordinates: [
+          43.510129409894716,
+          16.44979476928711
         ]
       },
     ],
@@ -153,7 +215,18 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [ `gatsby-remark-images` ],
+        plugins: [ `gatsby-remark-images` ],
       },
+    },
+    {
+      resolve: `gatsby-remark-images`,
+          options: {
+            // It's important to specify the maxWidth (in pixels) of
+            // the content container as this plugin uses this as the
+            // base for generating different widths of each image.
+            maxWidth: 600,
+          }
     },
     {
       resolve: 'gatsby-plugin-react-leaflet',

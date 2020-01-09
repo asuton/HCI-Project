@@ -9,7 +9,7 @@ import styles from "../styles/index.module.css"
 //koristi se spread operator ...props kako bi se omogucilo koristenje text, button i path unutar card komponente
 
 let props1 = {
-  text: 'Za pretraživanje restorana po njhovom nazivu',
+  text: 'Za pretraživanje restorana po njihovom nazivu',
   button: `Klikni ovdje`,
   path: '/search'
 }

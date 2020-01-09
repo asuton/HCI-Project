@@ -4,6 +4,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
   const {createPage} = boundActionCreators;
 
   const restaurantTemplate = path.resolve('src/templates/restaurant.js');  
+  const blogTemplate = path.resolve('src/templates/blog.js');  
 
   return graphql(`{
     allMdx {
@@ -12,10 +13,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
           body
           frontmatter {
             path
-            name
-            image
-            address
-            stars
+            blog
           }
         }
       }
@@ -27,10 +25,16 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     }
 
     res.data.allMdx.edges.forEach(({node}) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: restaurantTemplate
-      })
+      if(node.frontmatter.blog === "blog"){
+        createPage({
+          path: node.frontmatter.path,
+          component: blogTemplate
+      })}
+      else{
+        createPage({
+          path: node.frontmatter.path,
+          component: restaurantTemplate
+      })}
     })
   })
 }

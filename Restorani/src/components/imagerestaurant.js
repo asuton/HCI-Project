@@ -35,4 +35,4 @@ const RestaurantImage = props => (
   />
 );
 
-export default RestaurantImage;
+export default RestaurantImage

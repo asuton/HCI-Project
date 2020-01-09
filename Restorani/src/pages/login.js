@@ -39,14 +39,14 @@ handleSubmit=(event)=>{
   
   event.preventDefault();
   this.setState({active: !this.state.active});
-  this.inf[3].text="Profil"; 
+  this.inf[4].text="Profil"; 
   }
 
 handleClick=()=>{
  
   if(window.confirm("Do you really want to Sign Out?"))
   { this.setState({active: !this.state.active});
-    this.inf[3].text="Prijavi se";}
+    this.inf[4].text="Prijavi se";}
 
 }
 
@@ -56,7 +56,7 @@ funkcija(){
   return(
       <>
       <Layout>
-      {this.inf[3].text=="Prijavi se" ?
+      {this.inf[4].text=="Prijavi se" ?
          <>
            <div  className={styles.display}  >
               <div className = {styles.container}>
