@@ -1,173 +1,187 @@
 ---
 path: '/search/Makarun'
 name: 'Makarun'
-stars: 3
+stars: 5
 address: "Marulićeva ul. 3, 21000, Split"
 image: "makarun.jpg"
 ---
 import Collapse from "../../components/collapse"
-import styles from "../../styles/collapse.module.css"
+import Review from "../../components/review"
 
 ## Jelovnik
 
 <br></br>
 
-<Collapse name = "Predjela" open = "collapse show">
+<Collapse name = "Predjelo" open = "collapse show">
 
-<div className = {styles.column}>
-
-###### Morski pjat 
-###### Riblji tatar  
-###### Salata od ramsteka
-###### Riblji carpaccio
-###### Dalmatinski pjat
-###### Pršut
-
-</div>
-
-
-<div className =  {styles.price}>
-
-###### 110kn
-###### 240kn  
-###### 140kn
-###### 130kn
-###### 100kn
-###### 70kn
-
-</div>
-
-</Collapse>
-
-<Collapse name = "Juhe" open = "collapse">
-
-<div className = {styles.column}>
-
-###### Riblja 
-###### Gazpacho
-###### Od pečenih rajčica
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 75kn
-###### 50kn  
-###### 50kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Morski pjat </td><td> 110kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Riblji tatar </td><td> 240kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Salata od ramsteka </td><td> 140kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Riblji carpaccio </td><td> 130kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Dalmatinski pjat </td><td> 100kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Pršut </td><td> 70kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
-<Collapse name = "Tjestenine" open = "collapse">
+<Collapse name = "Juha" open = "collapse">
 
-<div className = {styles.column}>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Riblja </td><td> 75kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Gazpacho </td><td> 50kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Od pečenih rajčica </td><td> 50kn </td>
+    </tr>
+  </tbody>
+</table>
 
-###### Makaruni s biftekom
-###### Crna makarunada
-###### Zeleni makaruni
+</Collapse>
 
+<Collapse name = "Tjestenina" open = "collapse">
 
-</div>
-
-<div className =  {styles.price}>
-
-###### 140kn
-###### 130kn
-###### 150kn 
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Makaruni s biftekom </td><td> 140kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Crna makarunada </td><td> 130kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Zeleni makaruni </td><td> 150kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
 <Collapse name = "Meso" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Filet Mignon
-###### Sous vide ramstek
-###### Ramstek bika
-###### Marinirana janjetina
-
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 170kn
-###### 200kn
-###### 140kn 
-###### 200kn
-
-</div>
-
-</Collapse>
-
-<Collapse name = "Ribe" open = "collapse">
-
-<div className = {styles.column}>
-
-###### Riblji filet
-###### Zapečena hobotnica 
-###### Jadranske lignje
-###### Jadranski škampi
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 220kn
-###### 160kn
-###### 500kn 
-###### 900kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Filet Mignon </td><td> 170kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Sous vide ramstek </td><td> 200kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Ramstek bika </td><td> 140kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Marinirana janjetina </td><td> 200kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
-<Collapse name = "Prilozi" open = "collapse">
+<Collapse name = "Riba" open = "collapse">
 
-<div className = {styles.column}>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Riblji filet </td><td> 220kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Zapečena hobotnica </td><td> 160kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Jadranske lignje </td><td> 500kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Jadranski škampi </td><td> 900kn </td>
+    </tr>
+  </tbody>
+</table>
 
-###### Zapečeni krumpir
-###### Blitva na dalmatinski
-###### Pomfrit
-###### Povrće s žara
-###### Soparnik
-###### Pire s tartufima
+</Collapse>
 
-</div>
+<Collapse name = "Prilog" open = "collapse">
 
-<div className =  {styles.price}>
-
-###### 45kn
-###### 35kn
-###### 35kn 
-###### 45kn
-###### 50kn
-###### 50kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Zapečeni krumpir </td><td> 45kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Blitva na dalmatinski </td><td> 35kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Pomfrit </td><td> 35kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Povrće s žara </td><td> 45kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Soparnik </td><td> 50kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Pire s tartufima </td><td> 50kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
 <Collapse name = "Desert" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Sorbet
-###### Gluten free torta
-###### Čokoladni bingo
-
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 50kn
-###### 50kn
-###### 50kn 
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Sorbet </td><td> 50kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Gluten free torta </td><td> 50kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Čokoladni bingo </td><td> 50kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
+
+<br></br>
+<br></br>
+
+## Recenzije
+
+<br></br>
+
+<Review name = {"Saša Bartulović"} 
+        text = {"Ako postoji mjesto u Splitu gdje želite odvesti dragu osobu,poslovnog partnera...ma da ne duljim.... ekipu... i zadiviti je kvalitetom jela , usluge i atmosfere onda je to Makarun...jednostavno danas je to mjesto kako kažu must see must eat there ako želite upoznati Split i ponudu hrane ravnu Michelinovim standardima uz ..naravno jako razumne cijene...Put kojim je krenulo osoblje i vlasnici je jedinstven u ponudi grada pod Marjanom i oni gaze njime ne obazirući se, na ostatak prilično suhoparne scene...Gaze i ne obaziru se , s pravom....Izabrali meso , ribu ili bilo što iz ponude uz savjet vrhunske posluge i konobara ne možete pogriješiti...duša Splita Dalmacije i Jadrana je svud oko vas...u svakom zalogaju pršti okus Dalmacije i Splita kojeg pomalo zaboravljamo...Zato oba palca gore...Ekipo Makaruna ...Vi ste duša i prvi dragulj gastronomske ponude danas u Splitu..."}
+        date = {"23.02.2019"}
+        grade = {"5"}></Review>
+
+<Review name = {"Daniela Batinović Ex Kovačić"} 
+        text = {"Svaka cast...pohvale na gastronomskom uzitku....od hrane ...prezentacije...do profesionalnosti i ljubaznosti osoblja...vidimo se opet...."}
+        date = {"09.10.2018"}
+        grade = {"5"}></Review>        

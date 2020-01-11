@@ -1,12 +1,7 @@
-//pocetna stranica, sadrzi dvi kartice za preusmjeravanje na trazilicu ili kartu
-
 import React from "react"
 import LayoutIndex from "../components/layout/layoutIndex"
 import Card from "../components/card"
 import styles from "../styles/index.module.css"
-
-//props1 i props2 podaci za kartice koji se iskoristavaju unutar card komponente
-//koristi se spread operator ...props kako bi se omogucilo koristenje text, button i path unutar card komponente
 
 let props1 = {
   text: 'Za pretraživanje restorana po njihovom nazivu',
@@ -23,7 +18,7 @@ let props2 = {
 const IndexPage = () => (
     <LayoutIndex>
       <div className = {styles.container}>
-        <div className = {`row ${styles.row}`}>
+        <div className = {`row ${styles.row}`} style = {{marginRight: "0px", marginLeft: "-17px"}}>
           <Card {...props1}></Card>
           <Card {...props2}></Card>
         </div>

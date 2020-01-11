@@ -2,9 +2,6 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-//graphql dohvaca sve slike restorana
-//pri cemu vraca Img fluidnu sliku
-
 const RestaurantImage = props => (
   <StaticQuery
     query = {graphql`

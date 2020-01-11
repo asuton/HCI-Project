@@ -1,13 +1,8 @@
-//definirana stilizirana pozadinska slika
-
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
-
 import BackgroundImage from 'gatsby-background-image'
 
-//BackGroundSection dobiva sadrzaj iz Layouta
-//preko graphql upita dohvaca fluidnu sliku
 const BackgroundSection = ({ className, children }) => (
   <StaticQuery
     query = {graphql`
@@ -23,8 +18,6 @@ const BackgroundSection = ({ className, children }) => (
     `}
     render = {data => {
 
-      //Definirana pozadinska slika i smjesten sadrzaj iz layouta kao children
-
       const imageData = data.desktop.childImageSharp.fluid
       return (
         <BackgroundImage
@@ -39,8 +32,6 @@ const BackgroundSection = ({ className, children }) => (
     }}
   />
 )
-
-//stvaranje stilizirane pozadinske slike s iducim svojstvima
 
 const StyledBackgroundSection = styled(BackgroundSection)`
   min-width: 100%;

@@ -1,6 +1,3 @@
-//stilizirana link komponenta koja je bijela
-//koristi se kod komponenta card.js i stranice login.js za botune
-
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'

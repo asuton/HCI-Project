@@ -1,14 +1,11 @@
-//card komponenta koristena u komponenti restaurant.js
-
 import React from 'react'
 import styles from "../styles/restaurantCard.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "../components/fontawesome.js"
 import RestaurantImage from "../components/imagerestaurant"
 import StyledLinkB from "./links/StyledLinkB"
-
-//pomocu FontAwesome se definiraju zvjezdice
-//niz a sadrzi broj zvjezdica koji je dobiven preko stars 
+import {Link} from 'gatsby'
+ 
 
 const RestaurantCard = ({name, image, stars, address, path}) => {
 
@@ -21,7 +18,7 @@ const RestaurantCard = ({name, image, stars, address, path}) => {
         <div className = "card mt-3">
           <div className = "row no-gutters">
             <div className = {`${styles.image} col-md-4`}>
-              <RestaurantImage filename = {image}/>
+              <Link to = {path}><RestaurantImage filename = {image}/></Link>
             </div>
             <div className = "col-md-8" >
               <div className = {`card-body ${styles.content}`}>

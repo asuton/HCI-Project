@@ -1,13 +1,8 @@
-//card komponenta koristena u komponenti restaurant.js
-
 import React from 'react'
 import styles from "../styles/RestaurantTemplateCard.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "../components/fontawesome.js"
 import RestaurantImage from "../components/imagerestaurant"
-
-//pomocu FontAwesome se definiraju zvjezdice
-//niz a sadrzi broj zvjezdica koji je dobiven preko stars 
 
 const RestaurantTemplateCard = ({name, image, stars, address}) => {
 

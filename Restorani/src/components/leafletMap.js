@@ -1,8 +1,3 @@
-//leaflet komponenta s kojom se definira prostor za kartu
-//map komponenta definira div karte te poziciju sloja koji se koristi
-//tile layer komponenta sluzi za definiranje sloja --> koristi se mapbox
-//koristen kod map.js stranice
-
 import React from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 import '../styles/leafletMap.css'
@@ -26,9 +21,6 @@ class LeafletMap extends React.Component {
       );
   }
 }
-
-//Markers komponenta preko graphqla dobiva lokacije restorana
-//predstavlja niz Marker komponenti s kojima se postavljaju markeri na kartu
 
 const Markers = () => {
 

@@ -6,108 +6,112 @@ address: "Tončićeva ul. 12, 21000, Split"
 image: "galija.jpg"
 ---
 import Collapse from "../../components/collapse"
-import styles from "../../styles/collapse.module.css"
+import Review from "../../components/review"
 
 ## Jelovnik
 
 <br></br>
 
-<Collapse name = "Pizze" open = "collapse show">
+<Collapse name = "Pizza" open = "collapse show">
 
-<div className = {styles.column}>
-
-###### Quatro staggione
-###### Spalato
-###### Diavola
-###### Margarita napolitana
-###### Pikantna
-###### Verde
-
-</div>
-
-
-<div className =  {styles.price}>
-
-###### 80kn
-###### 65kn  
-###### 75kn
-###### 60kn  
-###### 70kn
-###### 80kn  
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Quatro staggione </td><td> 80kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Spalato </td><td> 65kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Diavola </td><td> 75kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Margarita napolitana </td><td> 60kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Pikantna </td><td> 70kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Verde </td><td> 80kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
 <Collapse name = "Tjestenina" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Lasagna Bolognese
-###### Tagliatelle
-###### Ravioli
-###### Spaghetti gamberetti
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 90kn
-###### 105kn
-###### 95kn
-###### 85kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Lasagna Bolognese </td><td> 90kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Tagliatelle </td><td> 105kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Ravioli </td><td> 95kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Spaghetti gamberetti </td><td> 85kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
 <Collapse name = "Meso" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Galija Burger
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 85kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Galija Burger </td><td> 85kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
-<Collapse name = "Ribe" open = "collapse">
+<Collapse name = "Riba" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Tuna & verdure
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 110kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Tuna & verdure </td><td> 110kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
 <Collapse name = "Desert" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Panna cotta
-###### Kolač kuće
-
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 20kn
-###### 28kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Panna cotta </td><td> 20kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Kolač kuće </td><td> 28kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
+
+<br></br>
+<br></br>
+
+## Recenzije
+
+<br></br>
+
+<Review name = {"Željana Eterović"} 
+        text = {"Odlična pizza iz krušne peći i domaća tjestenina u ugodnom ambijentu uz kvalitetno osoblje."}
+        date = {"11.10.2019"}
+        grade = {"4"}></Review>

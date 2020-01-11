@@ -1,25 +1,21 @@
 import React from 'react'
 import styles from '../styles/collapse.module.css'
 
-//collapse koristen za jelovnike u mdx datotekama
-//prima ime restorana, hranu i cijene kao children te da li je inicijalno otvoren ili ne
-
 const Collapse = ({name, open, children}) => {
-    
-    
+     
     return(
 
-        <div class="accordion">
-            <div class="card">
-                <div class="card-header" id={`heading${name}`}>
-                    <h2 class="mb-0">
-                        <button class="btn btn-link collapsed"  style = {{color: 'crimson'}} type="button" data-toggle="collapse" data-target={`#${name}`} aria-expanded="false">
-                            {name}
+        <div className="accordion">
+            <div className="card">
+                <div className={`card-header ${styles.header}`} data-toggle="collapse" data-target={`#${name}`} id={`heading${name}`}>
+                    <h2 className="mb-0">
+                        <button className={`btn btn-link collapsed ${styles.btnLink}`}  style = {{color: 'crimson'}} type="button" data-toggle="collapse" data-target={`#${name}`} aria-expanded="false">
+                            <h5 className={styles.heading}>{name}</h5>
                         </button>
                     </h2>
                 </div>
-                <div id={`${name}`} class={`${open}`}>
-                    <div class={`card-body px-1 ${styles.content}`}>
+                <div id={`${name}`} className={`${open}`}>
+                    <div className={`card-body px-1 ${styles.content}`}>
                         {children}
                     </div>
                 </div>

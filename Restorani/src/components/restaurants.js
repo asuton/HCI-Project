@@ -1,33 +1,28 @@
-//popis svih restorana
-
 import React from "react"
 import {graphql, useStaticQuery } from "gatsby"
 import RestaurantCard from "./restaurantCard"
 import styles from "../styles/restaurantCard.module.css"
 
-
-const Restorani =()=>{
-  //grapqhl upit dohvaca information iz gatsby-config.js
-  //information - podaci o restoranima
+const Restorani = () => {
   
   const data = useStaticQuery(graphql`
-  query {
-    site {
-      siteMetadata {
-        information {
-         address
-          name
-          stars
-          path
-          image
+    query {
+      site {
+        siteMetadata {
+          information {
+            address
+            name
+            stars
+            path
+            image
+          }
         }
       }
     }
-  }
-`)
-const {information} = data.site.siteMetadata;
-return( <Restaurants data={information}></Restaurants>)
-  
+  `)
+  const {information} = data.site.siteMetadata;
+  return( <Restaurants data={information}></Restaurants>)
+
 }
 
 class Restaurants extends React.Component {  
@@ -54,7 +49,7 @@ class Restaurants extends React.Component {
        
       }
     
- handleClick=(order)=> {
+ handleClick = (order) => {
      if(order==1)
          this.setState({inf:this.inf.sort((a, b) =>  (a.stars > b.stars) ? -1 : 1)}) 
      else 
@@ -68,36 +63,29 @@ class Restaurants extends React.Component {
 
 }
   render(){
-     
-
-//address, name, stars i path iz graphql upita spremaju se unutar information
 
   return (
     <>
-   <div className={styles.FilterandSearch}>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Sortiraj
+    <div className={styles.FilterandSearch}>
+      <input className = {styles.search} type="text" placeholder="Pretraži restorane" value={this.state.search} onChange={this.updateSearch} />
+      <div className="dropdown">
+        <button className={`btn btn-outline-secondary btn-lg dropdown-toggle`} type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sortiraj
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" onClick={() => { this.handleClick('1') } } type="button">Sortiraj po ocjeni</button>
-          <button class="dropdown-item" onClick={() => { this.handleClick('2') } } type="button">Sortiraj po abecedi</button>
+        <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button className="dropdown-item" onClick={() => { this.handleClick('1') } } type="button">Sortiraj po ocjeni</button>
+          <button className="dropdown-item" onClick={() => { this.handleClick('2') } } type="button">Sortiraj po abecedi</button>
         </div>
       </div>
-
-      <input type="text" placeholder="Search" value={this.state.search} onChange={this.updateSearch} />
-      </div>
-     {this.page()}    
+    </div>
+      {this.page()}    
         </>
   )
   }
 }
 
-//Restaurant komponenta preko Restaurants dobiva information te zatim stvara novi niz
-//niz se sastoji od RestaurantCard komponenti
 class Restaurant  extends React.Component{
   
-
   render(){
   
       return(

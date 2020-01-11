@@ -18,9 +18,18 @@
     justify-content: space-between;
 }
 
-.btn-link{
-    color: red;
+.header:hover{
+    cursor: pointer;
 }
+
+.btnLink:hover{
+    text-decoration: none !important;
+}
+
+.btnLink:focus{
+    text-decoration: none !important;
+}
+
 
 @media only screen and (max-width: 3000px){
     .content{

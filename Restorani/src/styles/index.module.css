@@ -1,15 +1,12 @@
-/*index.js raspored kartica i responzivnost*/
-
 .container{
-    min-width: 100%;
+    width: 100%;
     min-height: calc(100vh - 65px);
-    height: auto;
     padding-left: 10%;
     padding-right: 10%;
-    display: grid;
 }
 
 .row{
+    min-height: calc(100vh - 65px);
     flex-direction: row;
     justify-content: center;
     align-items: center;

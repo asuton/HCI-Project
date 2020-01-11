@@ -1,12 +1,9 @@
-//footer koristen u layout komponenti
-
 import React from 'react'
 import { graphql, useStaticQuery } from "gatsby"
 import styles from "../styles/footer.module.css"
 
-//footer komponenta sadrzi ime autora stranice
 const Footer = () => {
-    //graphql dohvaca autore
+    
     const data = useStaticQuery(graphql`
     query {
       site {

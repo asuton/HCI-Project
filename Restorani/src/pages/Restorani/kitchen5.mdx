@@ -6,124 +6,122 @@ address: "Ul. Kraj Svete Marije 1, 21000, Split"
 image: "kitchen5.jpg"
 ---
 import Collapse from "../../components/collapse"
-import styles from "../../styles/collapse.module.css"
+import Review from "../../components/review"
 
 ## Jelovnik
 
 <br></br>
 
-<Collapse name = "Predjela" open = "collapse show">
+<Collapse name = "Predjelo" open = "collapse show">
 
-<div className = {styles.column}>
-
-###### Rillete od skuše
-###### Tatarski biftek 
-###### Pizza s lisnatim
-
-</div>
-
-
-<div className =  {styles.price}>
-
-###### 75kn
-###### 110kn  
-###### 90kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Rillete od skuše </td><td> 75kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Tatarski biftek  </td><td> 110kn </td>
+    </tr>
+      <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Pizza s lisnatim </td><td> 90kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
-<Collapse name = "Juhe" open = "collapse">
+<Collapse name = "Juha" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Riblja
-###### Od mrkve i đumbira
-
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 45kn
-###### 40kn  
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Riblja </td><td> 45kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Od mrkve i đumbira </td><td> 40kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
 <Collapse name = "Meso" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Pačja prsa 
-###### Filet Mignon
-###### Odresci janjećeg buta
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 175kn
-###### 215kn
-###### 195kn 
-
-</div>
-
-</Collapse>
-
-<Collapse name = "Ribe" open = "collapse">
-
-<div className = {styles.column}>
-
-###### Filet Lubina
-###### Brudet od Grdobine 
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 150kn
-###### 150kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Pačja prsa </td><td> 175kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Filet Mignon </td><td> 215kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Odresci janjećeg buta </td><td> 195kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
-<Collapse name = "Salate" open = "collapse">
+<Collapse name = "Riba" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Miješana
-
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 35kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Filet Lubina </td><td> 150kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Brudet od Grdobine </td><td> 150kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
+<Collapse name = "Salata" open = "collapse">
+
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Miješana </td><td> 35kn </td>
+    </tr>
+  </tbody>
+</table>
+
+</Collapse>
 
 <Collapse name = "Desert" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Millefoglie
-###### Krema od limuna
-###### Torta od čokolade
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 40kn
-###### 40kn
-###### 45kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Millefoglie </td><td> 40kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Krema od limuna </td><td> 40kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Torta od čokolade </td><td> 45kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
+
+<br></br>
+<br></br>
+
+## Recenzije
+
+<br></br>
+
+<Review name = {"Duško Dragišić"} 
+        text = {"Sviđa mi se što se sve odvija na višoj no odmjerenoj razini pristupačnoj za svakog posjetioca profinjeno no doista do neke normalne granice što uvijek je za uspjeh najdobitnija kombinacija."}
+        date = {"26.11.2018"}
+        grade = {"4"}></Review>

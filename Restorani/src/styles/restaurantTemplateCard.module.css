@@ -1,11 +1,9 @@
-/*kartice restorana - slika, zvijezde i raspored sadrzaja kod stranice pojedinog restorana*/
-
 .title {
     font-size: 5vh;
 }
 
 .stars{
-    color:yellow;
+    color: gold;
 }
 
 .image{ 

@@ -73,7 +73,7 @@ module.exports = {
       },
       {
         name: "Apetit",
-        stars: 3,
+        stars: 5,
         address: "Ul. Pavla Šubića 5, 21000, Split",
         image: "apetit.jpg",
         path: "/search/Apetit",
@@ -95,7 +95,7 @@ module.exports = {
       },
       {
         name: "Lučica",
-        stars: 5,
+        stars: 3,
         address: "Lučica 7, 21000, Split",
         image: "lucica.jpg",
         path: "/search/Lucica",
@@ -139,7 +139,7 @@ module.exports = {
       },
       {
         name: "Makarun",
-        stars: 3,
+        stars: 5,
         address: "Marulićeva ul. 3, 21000, Split",
         image: "makarun.jpg",
         path: "/search/Makarun",

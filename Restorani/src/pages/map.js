@@ -1,6 +1,3 @@
-//stranica s kartom koristi LeafletMap kompontentu kojoj prosljeđuje inicijalnu poziciju ucitavanja i zoom 
-//s undenfined se provjerava da li se skripta izvodi u pregledniku pa ako je onda se primjenjuje leaflet komponenta
-
 import React from "react"
 import Layout from "../components/layout/layout"
 import LeafletMap from "../components/leafletMap"

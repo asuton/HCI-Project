@@ -6,7 +6,8 @@ address: "Obala kneza Branimira BB, 21000, Split"
 image: "basta.jpg"
 ---
 import Collapse from "../../components/collapse"
-import styles from "../../styles/collapse.module.css"
+import Review from "../../components/review"
+
 
 ## Jelovnik
 
@@ -14,113 +15,127 @@ import styles from "../../styles/collapse.module.css"
 
 <Collapse name = "Pizza" open = "collapse show">
 
-<div className = {styles.column}>
-
-###### Margherita 
-###### Vegeteriana  
-###### Capricciosa
-###### Buffalina
-###### Quattro Stagioni
-###### Tartufata
-###### Mare
-###### Primavera
-###### Basta
-###### Rustica
-###### Lavandina
-###### Gambero Verde
-###### Deliziosa
-
-</div>
-
-
-<div className =  {styles.price}>
-
-###### 58kn
-###### 65kn  
-###### 68kn
-###### 66kn
-###### 72kn
-###### 90kn
-###### 70kn
-###### 82kn
-###### 85kn
-###### 75kn
-###### 78kn
-###### 90kn
-###### 80kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+  <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Margherita  </td><td> 58kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Vegeteriana  </td><td> 65kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Capricciosa  </td><td> 68kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Buffalina  </td><td> 66kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Quattro Stagioni  </td><td> 72kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Tartufata  </td><td> 90kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Mare  </td><td> 70kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Primavera  </td><td> 82kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Basta  </td><td> 85kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Rustica </td><td> 75kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
 <Collapse name = "Salata" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Tonnata 
-###### Prosciutto Croccante
-###### Caprese-Vege
-###### Bresaola
-###### Insalata Salmone 
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 65kn
-###### 70kn  
-###### 55kn
-###### 65kn
-###### 90kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Tonnata </td><td> 65kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Prosciutto Croccante </td><td> 70kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Caprese-Vege </td><td> 55kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Insalata Salmone </td><td> 90kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
 <Collapse name = "Plata" open = "collapse">
 
-<div className = {styles.column}>
 
-###### Italiana 
-###### Di Casa
-###### Di Villagi
-###### Bologna
-###### Formaggi
-###### Toscana
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 150kn
-###### 130kn
-###### 145kn 
-###### 130kn
-###### 80kn
-###### 80kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Italiana </td><td> 150kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Di Casa </td><td> 130kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Di Villagi </td><td> 145kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Bologna </td><td> 130kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Formaggi </td><td> 80kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
 <Collapse name = "Sendvič" open = "collapse">
 
-<div className = {styles.column}>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Affumicato </td><td> 55kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Tonno e Mozzarella </td><td> 55kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Tonno e Mozzarella </td><td> 58kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Prosciutto e Mozzarella </td><td> 55kn </td>
+    </tr>
+  </tbody>
+</table>
 
-###### Affumicato
-###### Tonno e Mozzarella
-###### Bresaola
-###### Prosciutto e Mozzarella 
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 55kn
-###### 55kn
-###### 58kn 
-###### 55kn
-
-</div>
 
 </Collapse>
+
+<br></br>
+<br></br>
+
+## Recenzije
+
+<br></br>
+
+<Review name = {"Katarina Rožanković"} 
+        text = {"Dolazak u predivan restoran kompletno upropasti osoblje. Nas dvije s dvoje male djece dobije odmah jelovnike i nakon 3 puta pozivanja konobara da narucimo sa njegovim rijecima:evo me za sekundu nije urodilo plodom ni za naruciti pice,a kamoli nesto za jesti. 20 minuta cekanja s time da restoran nije bio pun i s time da je jedna obitelj dosla 10minuta nakon nas i oni su bili posluzeni je zavrseno s odlaskom iz restorana i ne vracanjem na isto mjesto."} 
+        grade = {"1"} 
+        date = {"18.07.2019"}></Review>
+<Review name = {"Irena Cvetek"}
+        text = {"Hrana je jako fina i interijer i eksterijer je vrlo lijepo uređen, naime usluga je poprilično loša. Konobari ti ne dopuštaju da sjedneš gdje želiš i brzo moraš naručit, pojest i otić."}
+        grade = {"3"}
+        date = {"05.04.2018"}></Review>

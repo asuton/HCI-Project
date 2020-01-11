@@ -1,7 +1,5 @@
-/* za recenzije */
-
 .stars{
-    color:yellow;
+    color: gold;
 }
 
 .header{
@@ -14,4 +12,8 @@
     border-top: none !important;
     border-left: none !important;
     border-right: none !important;
+}
+
+.font{
+    font-size: 90%;
 }

@@ -1,6 +1,3 @@
-//stilizirana link komponenta koja je crna
-//koristi se kod navigation komponente za linkove
-
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'

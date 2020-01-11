@@ -1,10 +1,7 @@
-//card komponenta koristena na pocetnoj stranici --> index.js
-
 import React from 'react'
 import styles from "../styles/card.module.css"
 import StyledLinkW from "./links/styledLinkW"
 
-//destrukturiranje props varijable na tekst kartice, link i tekst botuna
 
 const Card = ({text, path, button}) => {
     return(

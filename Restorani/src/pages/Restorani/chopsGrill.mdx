@@ -6,73 +6,82 @@ address: "Tončićeva ul. 4, 21000, Split"
 image: "chops.jpg"
 ---
 import Collapse from "../../components/collapse"
-import styles from "../../styles/collapse.module.css"
+import Review from "../../components/review"
+
 
 ## Jelovnik
 
 <br></br>
 
-<Collapse name = "Predjela" open = "collapse show">
+<Collapse name = "Predjelo" open = "collapse show">
 
-<div className = {styles.column}>
-
-###### Kremasta juha
-###### Tartar biftek  
-
-</div>
-
-
-<div className =  {styles.price}>
-
-###### 65kn
-###### 70kn  
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Kremasta juha </td><td> 65kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Tartar biftek </td><td> 70kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
 <Collapse name = "Meso" open = "collapse">
 
-<div className = {styles.column}>
 
-###### Svinjski rebarci
-###### Ražnjići od bifteka
-###### Ramstek punjen sirom
-###### Biftek Wellington
-###### T-bone
-
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 155kn
-###### 175kn
-###### 180kn 
-###### 210kn
-###### 275kn
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Svinjski rebarci </td><td> 155kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Tartar biftek </td><td> 175kn </td>
+    </tr>
+     <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Ramstek punjen sirom </td><td> 180kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Biftek Wellington </td><td> 210kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> T-bone </td><td> 275kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
 
 <Collapse name = "Desert" open = "collapse">
 
-<div className = {styles.column}>
-
-###### Hladna mini torta
-###### Čokoladna rožata
-###### Fantazija
-
-
-</div>
-
-<div className =  {styles.price}>
-
-###### 35kn
-###### 40kn
-###### 45kn 
-
-</div>
+<table className="table table-hover" style = {{fontSize: "1.15rem"}}>
+  <thead style = {{display: "none"}}><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+    <tbody style =  {{borderTop: "hidden"}}>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Hladna mini torta </td><td> 35kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Čokoladna rožata </td><td> 40kn </td>
+    </tr>
+    <tr>
+      <td className = "w-75" style = {{paddingLeft: "28px"}}> Fantazija </td><td> 45kn </td>
+    </tr>
+  </tbody>
+</table>
 
 </Collapse>
+
+<br></br>
+<br></br>
+
+## Recenzije
+
+<br></br>
+
+<Review name = {"Jase Demir"}
+        text = {"Ugodan restoran, ukusna hrana, sve pohvale iznimno ljubaznom konobaru Petru."}
+        grade = {"4"}
+        date = {"28.09.2019."}></Review>

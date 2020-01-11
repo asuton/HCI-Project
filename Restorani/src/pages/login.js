@@ -1,10 +1,10 @@
-//login forma email+lozinka
-
 import React from "react"
 import Layout from "../components/layout/layout"
 import styles from "../styles/login.module.css"
 import {graphql, useStaticQuery } from "gatsby"
-import { Link } from 'gatsby'
+import WhiteBackground from "../components/background/whiteBackground"
+import UserReview from "../components/userReview"
+
 const LoginPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -44,7 +44,7 @@ handleSubmit=(event)=>{
 
 handleClick=()=>{
  
-  if(window.confirm("Do you really want to Sign Out?"))
+  if(window.confirm("Jeste li sigurni da se želite odjaviti?"))
   { this.setState({active: !this.state.active});
     this.inf[4].text="Prijavi se";}
 
@@ -71,26 +71,37 @@ funkcija(){
                     <input type = "password" className = "form-control form-control-lg" id = "validationDefault02" placeholder = "Lozinka" required></input>
                   </div>
                   <br></br>
-                  <button type = "submit" className = {`btn btn-lg btn-danger ${styles.button}`}  >Prijavi se</button>
-                  
+                  <button type = "submit" className = {`btn btn-lg btn-danger ${styles.button}`} >Prijavi se</button>
                 </form>
               </div>
             </div>
            </> :
           <>
-            <div  className={styles.display}  >
-              <div className = {styles.container}>
-                <h3 className = "pb-5">Prijavljeni ste</h3>
-                <form className = {styles.content}  >
-                  <br></br>
-                  <Link to="/" type = "button" className = {`btn btn-lg btn-danger ${styles.button}`} >OK</Link>
-                 <br></br>
-                 <br></br>
-                 <br></br>
-                 <button type = "button" className = {`btn btn-lg btn-danger ${styles.button}`} onClick={ this.handleClick}  >Odjavi se</button>
-                </form>
+            <WhiteBackground>
+              <br></br>
+              <div>
+                <h3 className = "pb-3">Prijavljeni ste</h3>
+                <button type = "button" className = {`btn btn-lg btn-outline-danger`} onClick={this.handleClick}>Odjavi se</button>
               </div>
-           </div>
+              <br></br>
+              <br></br>
+              <h4>Korisnički račun:</h4>
+              <br></br>
+              <h5 style = {{paddingLeft: "5%"}}>Ime: Korisnik</h5>
+              <h5 style = {{paddingLeft: "5%"}}>E-mail: korisnik@mail.hr</h5>
+              <br></br>
+              <br></br>
+              <h4>Dosad ostavljene recenzije:</h4>
+              <br></br>
+              <UserReview name = {"Kadena"} 
+                          text = {"Vrhunski ambijent i hrana"}
+                          date = {"09.01.2020"}
+                          grade = {"4"}></UserReview>
+              <UserReview name = {"Uje Oil Bar"} 
+                          text = {"Poštovani, uzimajući u obzir konkurenciju sličnog cjenovnog razreda, u popriličnoj ste fiskalno-kvantitativnoj disproporciji (procijenjeno kroz nekoliko posjeta) te ovom politikom nećete steći redovnu klijentelu."}
+                          date = {"02.01.2020"}
+                          grade = {"3"}></UserReview>
+            </WhiteBackground>
           </>}
 </Layout> </>
 )}

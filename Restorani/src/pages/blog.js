@@ -12,6 +12,7 @@ export default ({
   return (
     <Layout>
       <WhiteBackground>
+        <br></br>
         <h2>Gastro blog</h2>
         <br></br>
         <BlogPosts posts={posts} />

@@ -1,11 +1,7 @@
-//sluzi za ucitavanje svih ikona drustvenih mreza za kontakt
-
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styles from "../styles/aboutus.module.css"
-
-//dohvaca sve slike iz about foldera definirane visine/sirine
 
 const ImageAbout = () => {
   const data = useStaticQuery(graphql`
@@ -29,9 +25,6 @@ const ImageAbout = () => {
         <Social data = {data}/>
   )
 }
-
-//a predstavlja linkove koji se pridruzuju ikonama
-//Social komponenta vraca niz ikona unutar diva pri cemu su pridruzeni odgovarajuci linkovi
 
 const Social = ({data}) => {
   var a = ["https://hr-hr.facebook.com/fesb.hr", "https://github.com/github", "https://www.google.com/intl/hr/gmail/about/#", "https://twitter.com/hashtag/fesb?lang=en"]
