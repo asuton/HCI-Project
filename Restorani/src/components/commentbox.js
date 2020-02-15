@@ -55,7 +55,7 @@ const Page = () => {
             stil:"{styles.stars}"
          }
         this.state={
-          flag:[0,0,0,0,0]
+          flag:[1,0,0,0,0]
         }     
 
   }
@@ -68,16 +68,17 @@ updateSearch=(event)=>{
 
 Popup=(event)=>{
     if(this.inf[4].text=='Prijavi se')
-            alert( this.inf[4].text)
+            alert('Morate se prijaviti kako bi ostavili recenziju')
 }  
   
 submit=(event)=>{
-    if(this.state.search=='')
-        alert("ne mozete prazan komentar napisat")
+    if(this.state.search=='' || this.state.search==null)
+        alert("Ne možete ostaviti prazan komentar")
     else
      {this.setState({a:'1'})
       this.setState({komentar:this.state.search})
       this.setState({search:''})
+      this.setState({grade1:this.Grade})
      }
 }
 handleClick=(number)=>{
@@ -99,20 +100,19 @@ handleClick=(number)=>{
         
     return(
         <>
-         <div >
-         
+         <div class={`card ${styles.card}`}>
         <p  className = {styles.text}>Ostavite recenziju</p>
         <div className={styles.display}>
-        <p >Ocijenite restoran</p>
-        <p  className = {styles.len} style={this.state.flag[0]==0? {fontWeight: 'normal'}:{fontWeight:'bold'}} onClick={() => { this.handleClick('1') }}>1</p>
-        <p className = {styles.len} style={this.state.flag[1]==0? {fontWeight: 'normal'}:{fontWeight:'bold'}} onClick={() => { this.handleClick('2') }}>2</p>
-        <p  className = {styles.len} style={this.state.flag[2]==0? {fontWeight: 'normal'}:{fontWeight:'bold'}} onClick={() => { this.handleClick('3') }}>3</p>
-        <p className = {styles.len} style={this.state.flag[3]==0? {fontWeight: 'normal'}:{fontWeight:'bold'}} onClick={() => { this.handleClick('4') } }>4</p>
-        <p className = {styles.len}  style={this.state.flag[4]==0? {fontWeight: 'normal'}:{fontWeight:'bold'}} onClick={() => { this.handleClick('5') }}>5</p>
+        <p >Ocijenite restoran:</p>
+        <p  className = {styles.len} style={this.state.flag[0]==0? {fontWeight: 'normal'}:{fontWeight:'bold', color: 'red'}} onClick={() => { this.handleClick('1') }}>1</p>
+        <p className = {styles.len} style={this.state.flag[1]==0? {fontWeight: 'normal'}:{fontWeight:'bold', color: 'red'}} onClick={() => { this.handleClick('2') }}>2</p>
+        <p  className = {styles.len} style={this.state.flag[2]==0? {fontWeight: 'normal'}:{fontWeight:'bold', color: 'red'}} onClick={() => { this.handleClick('3') }}>3</p>
+        <p className = {styles.len} style={this.state.flag[3]==0? {fontWeight: 'normal'}:{fontWeight:'bold', color: 'red'}} onClick={() => { this.handleClick('4') } }>4</p>
+        <p className = {styles.len}  style={this.state.flag[4]==0? {fontWeight: 'normal'}:{fontWeight:'bold', color: 'red'}} onClick={() => { this.handleClick('5') }}>5</p>
         </div>
-         <input  className = {styles.komentar} type="text" placeholder='Ovdje unesite svoj dozivljaj' value={this.state.search} onClick={this.Popup} onChange={this.updateSearch} />
+         <input  className = {styles.komentar} type="text" placeholder='Ovdje unesite svoj komentar' value={this.state.search} onClick={this.Popup} onChange={this.updateSearch} />
          <br></br>
-        <button className = {`btn btn-lg btn-danger ${styles.botun}`}  onClick={this.submit}>submit</button>
+        <button className = {`btn btn-lg btn-danger ${styles.botun}`}  onClick={this.submit}>Komentiraj</button>
         </div>
      
        
@@ -125,8 +125,8 @@ handleClick=(number)=>{
                {this.Funkcija()}  
                {this.state.a == 1? <Review name = {"Korisnik"} 
         text = {this.state.komentar}
-        date = {"16.12.2019"}
-        grade = {this.Grade}></Review> : <></>} 
+        date = {"18.02.2020."}
+        grade = {this.state.grade1}></Review> : <></>} 
       
 
               </>

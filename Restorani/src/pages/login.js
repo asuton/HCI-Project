@@ -84,12 +84,14 @@ funkcija(){
                 <button type = "button" className = {`btn btn-lg btn-danger`} onClick={this.handleClick}>Odjavi se</button>
               </div>
               <br></br>
+              <hr></hr>
               <br></br>
               <h4>Korisnički račun:</h4>
               <br></br>
-              <h5 style = {{paddingLeft: "5%"}}>Ime: Korisnik</h5>
-              <h5 style = {{paddingLeft: "5%"}}>E-mail: korisnik@mail.hr</h5>
+              <h5 style = {{paddingLeft: "1.25rem"}}>Ime: Korisnik</h5>
+              <h5 style = {{paddingLeft: "1.25rem"}}>E-mail: korisnik@mail.hr</h5>
               <br></br>
+              <hr></hr>
               <br></br>
               <h4>Dosad ostavljene recenzije:</h4>
               <br></br>

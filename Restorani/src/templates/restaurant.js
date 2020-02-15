@@ -17,6 +17,7 @@ export default function Template({data}) {
           <RestaurantTemplateCard {...restaurant.frontmatter}></RestaurantTemplateCard>
           <MDXRenderer frontmatter={restaurant.frontmatter}>{restaurant.body}</MDXRenderer>
           <br></br>
+          <br></br>
           <Link to = "/search" className = {styles.link}>
               <button type="button" className="btn btn-light" style={{backgroundColor: 'white', borderColor: 'white'}}>
                 <span className = {styles.arrow}></span>

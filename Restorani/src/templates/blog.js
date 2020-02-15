@@ -14,6 +14,7 @@ export default ({data})  => {
                 <MDXRenderer>{blog.body}</MDXRenderer>
               </div>
                 <br></br>
+                <br></br>
                 <Link to = "/blog" className = {styles.link}>
                   <button type="button" className="btn btn-light" style={{backgroundColor: 'white', borderColor: 'white'}}>
                     <span className = {styles.arrow}></span>

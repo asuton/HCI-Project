@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Naslov`,
+    title: `beziMENI`,
     description: ``,
     author: `Anita Suton & Ela Vujasin`,
     menuItems: [

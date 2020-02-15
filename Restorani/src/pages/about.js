@@ -38,7 +38,6 @@ const AboutPage = () => (
     <Layout>
       <WhiteBackground>
         <div>
-          <CommentBox></CommentBox>
           <h2>O nama</h2>
           <p>{about}</p>
           <br></br>
