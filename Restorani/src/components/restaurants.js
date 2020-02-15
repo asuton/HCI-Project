@@ -32,6 +32,7 @@ class Restaurants extends React.Component {
          this.state={
            search: ''
          };
+
   }
   
   page(){
@@ -72,7 +73,7 @@ class Restaurants extends React.Component {
         <button className={`btn btn-outline-secondary btn-lg dropdown-toggle`} type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Sortiraj
         </button>
-        <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
           <button className="dropdown-item" onClick={() => { this.handleClick('1') } } type="button">Sortiraj po ocjeni</button>
           <button className="dropdown-item" onClick={() => { this.handleClick('2') } } type="button">Sortiraj po abecedi</button>
         </div>

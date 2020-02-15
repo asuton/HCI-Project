@@ -24,17 +24,19 @@ const BlogPost = ({posts}) => {
 
 const Post = ({path, title, text, date}) => {
     return(
+      <StyledLinkB to = {path}>
         <div className = "card mt-3">
           <div className = "row no-gutters">
             <div className = "col-md-12" >
               <div className = {`card-body`}>
-                <StyledLinkB to = {path}><h3 className = {`card-title`}>{title}</h3></StyledLinkB>
+                <h3 className = {`card-title`}>{title}</h3>
                 <p className = "card-text text-muted">{date}</p>
                 <p className = "card-text">{text}</p>
               </div>
             </div>
           </div>
         </div>
+      </StyledLinkB>
     )
 }
 

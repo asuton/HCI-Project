@@ -3,6 +3,7 @@ import styles from "../styles/RestaurantTemplateCard.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "../components/fontawesome.js"
 import RestaurantImage from "../components/imagerestaurant"
+import StyledLinkB from "../components/links/styledLinkB"
 
 const RestaurantTemplateCard = ({name, image, stars, address}) => {
 
@@ -21,7 +22,7 @@ const RestaurantTemplateCard = ({name, image, stars, address}) => {
               <div className = {`card-body ${styles.content}`}>
                 <h5 className = {`${styles.title} card-title`}>{name}</h5>
                 <p className = {`${styles.stars} card-text`}>{a}</p>
-                <p className = {`card-text text-muted ${styles.text}`}>{address}</p>
+                <StyledLinkB to = "/map"><p className = {`card-text text-muted ${styles.text}`}>{address}</p></StyledLinkB>
               </div>
             </div>
           </div>

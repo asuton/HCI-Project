@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import WhiteBackground from "../components/background/whiteBackground"
 import ImageAbout from "../components/imageabout"
+import CommentBox from "../components/commentbox"
 
 let about = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
@@ -37,12 +38,16 @@ const AboutPage = () => (
     <Layout>
       <WhiteBackground>
         <div>
+          <CommentBox></CommentBox>
           <h2>O nama</h2>
           <p>{about}</p>
+          <br></br>
           <h2>O aplikaciji</h2>
           <p>{app}</p>
+          <br></br>
           <h2>Kontaktirajte nas</h2>
           <p>{contact}</p>
+          <br></br>
           <ImageAbout></ImageAbout>
         </div> 
       </WhiteBackground>

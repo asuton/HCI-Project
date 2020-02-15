@@ -28,28 +28,6 @@ module.exports = {
     background: `../images/food.png`,
     information: [
       {
-        name: "Bokamorra",
-        stars: 3,
-        address: "Trumbićeva obala 16, 21000, Split",
-        image: "bokamorra.jpg",
-        path: "/search/Bokamorra",
-        coordinates: [
-          43.50705579044621,
-          16.432593762874603
-        ]
-      },
-      {
-        name: "Plan B",
-        stars: 4,
-        address: "Slobode ul. 16A, 21000, Split",
-        image: "plan-b.jpg",
-        path: "/search/PlanB",
-        coordinates: [
-          43.5090011373931,
-          16.450223922729492
-        ]
-      },
-      {
         name: "Basta",
         stars: 2,
         address: "Obala kneza Branimira BB, 21000, Split",
@@ -58,17 +36,6 @@ module.exports = {
         coordinates: [
           43.50633405078391,
           16.43266350030899
-        ]
-      },
-      {
-        name: "Bokeria",
-        stars: 5,
-        address: "Domaldova ul. 8, 21000, Split",
-        image: "bokeria.jpg",
-        path: "/search/Bokeria",
-        coordinates: [
-          43.50952247972195,
-          16.438371241092682
         ]
       },
       {

@@ -46,8 +46,8 @@ const Markers = () => {
     {information.map(restoran => (
       <Marker key = {restoran.coordinates} position = {restoran.coordinates}>
         <Popup>
-          <StyledLinkB to = {restoran.path}><div>{restoran.name}</div></StyledLinkB>
-          <div>{restoran.address}</div>
+          <StyledLinkB to = {restoran.path}><div><h4>{restoran.name}</h4></div></StyledLinkB>
+          <div><h6>{restoran.address}</h6></div>
         </Popup>
       </Marker>
       ))}

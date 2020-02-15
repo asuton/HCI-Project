@@ -1,0 +1,30 @@
+.display{
+    display: flex;
+    
+}
+.len{
+    padding-left: 10px;
+}
+
+.botun{
+  margin-left:100px;
+  margin-top:25px;
+  margin-bottom:30px;
+
+
+}
+.komentar{
+
+    height:75px;
+    width:400px;
+    padding-bottom: 50px;
+}
+
+.text{
+    font-weight: bold;
+    font-size:20px;
+}
+.len:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}

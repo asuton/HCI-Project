@@ -81,7 +81,7 @@ funkcija(){
               <br></br>
               <div>
                 <h3 className = "pb-3">Prijavljeni ste</h3>
-                <button type = "button" className = {`btn btn-lg btn-outline-danger`} onClick={this.handleClick}>Odjavi se</button>
+                <button type = "button" className = {`btn btn-lg btn-danger`} onClick={this.handleClick}>Odjavi se</button>
               </div>
               <br></br>
               <br></br>

@@ -15,6 +15,7 @@ const RestaurantCard = ({name, image, stars, address, path}) => {
       a.push(icon);
         
     return(
+      <StyledLinkB to = {path}>
         <div className = "card mt-3">
           <div className = "row no-gutters">
             <div className = {`${styles.image} col-md-4`}>
@@ -24,11 +25,12 @@ const RestaurantCard = ({name, image, stars, address, path}) => {
               <div className = {`card-body ${styles.content}`}>
                 <StyledLinkB to = {path}><h5 className = {`${styles.title} card-title`}>{name}</h5></StyledLinkB>
                 <p className = {`${styles.stars} card-text`}>{a}</p>
-                <p className = "card-text"><small className = "text-muted">{address}</small></p>
+                <Link to = "/map"><p className = "card-text"><small className = "text-muted">{address}</small></p></Link>
               </div>
             </div>
           </div>
         </div>
+      </StyledLinkB>
       )  
 }
 

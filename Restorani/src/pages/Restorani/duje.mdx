@@ -7,6 +7,7 @@ image: "duje.jpg"
 ---
 import Collapse from "../../components/collapse"
 import Review from "../../components/review"
+import CommentBox from "../../components/commentbox"
 
 ## Jelovnik
 
@@ -70,6 +71,8 @@ import Review from "../../components/review"
   </tbody>
 </table>
 
+</Collapse>
+
 <Collapse name = "Tjestenina" open = "collapse">
 
 <table className="table table-hover" style = {{fontSize: "1.15rem"}}>
@@ -89,8 +92,6 @@ import Review from "../../components/review"
     </tr>
   </tbody>
 </table>
-
-</Collapse>
 
 </Collapse>
 
@@ -207,6 +208,8 @@ import Review from "../../components/review"
 ## Recenzije
 
 <br></br>
+
+<CommentBox> </CommentBox>
 
 <Review name = {"Vesna Biočić"} 
         text = {"Ni sama neznam koliko smo puta bili i otisli zadovoljni!! Posljedni put bili dan nakon Uskrsa...po nasoj preporuci doveli prijatelje da proslavimo jedan rodjendan,otisli totalno razocarani...Lose,lose....."}
